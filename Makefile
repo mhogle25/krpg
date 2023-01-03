@@ -1,9 +1,15 @@
+#Packages
 SOURCE = src/krpg/com/game
+
 CORE = $(SOURCE)/core
+
+#Binary
 BINARY = bin
+
 BUILD = $(BINARY)/build
 TEST = $(BINARY)/test
 
+#Targets
 test: 
 	@mkdir -p $(BINARY)
 	@mkdir -p $(TEST)
