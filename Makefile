@@ -1,4 +1,5 @@
-SOURCE = src
+SOURCE = src/krpg/com/game
+CORE = $(SOURCE)/core
 BINARY = bin
 BUILD = $(BINARY)/build
 TEST = $(BINARY)/test
@@ -6,12 +7,12 @@ TEST = $(BINARY)/test
 test: 
 	@mkdir -p $(BINARY)
 	@mkdir -p $(TEST)
-	@kotlinc $(SOURCE)/main.kt -include-runtime -d $(TEST)/krpg.jar
+	@kotlinc $(CORE)/*.kt $(SOURCE)/*.kt -include-runtime -d $(TEST)/krpg.jar
 
 build:
 	@mkdir -p $(BINARY)
 	@mkdir -p $(BUILD)
-	@kotlinc $(SOURCE)/main.kt -include-runtime -d $(BUILD)/krpg.jar
+	@kotlinc $(CORE)/*.kt $(SOURCE)/*.kt -include-runtime -d $(BUILD)/krpg.jar
 
 clean-test:
 	@rm -rf $(TEST)
