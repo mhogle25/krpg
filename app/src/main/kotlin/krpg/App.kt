@@ -3,9 +3,15 @@
  */
 package krpg
 
+import krpg.core.KRPG
+
 class App {
+    private var krpg: KRPG? = null
+
     fun run() {
-        
+        this.krpg?.end()
+        this.krpg = KRPG()
+        this.krpg?.run()
     }
 }
 
