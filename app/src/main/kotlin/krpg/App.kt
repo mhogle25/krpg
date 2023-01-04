@@ -4,12 +4,12 @@
 package krpg
 
 class App {
-    val greeting: String
-        get() {
-            return "Hello World!"
-        }
+    fun run() {
+        
+    }
 }
 
 fun main() {
-    println(App().greeting)
+    val app: App = App()
+    app.run()
 }
