@@ -1,8 +1,9 @@
 package com.game
 
-import com.game.core.Game
+import com.game.core.KRPG
+import com.game.core.IO
 
 fun main() {
-    var game: Game = Game()
-    game.Begin();
+    var game: KRPG = KRPG()
+    game.begin();
 }
